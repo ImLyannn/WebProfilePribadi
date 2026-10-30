@@ -20,40 +20,80 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
       <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
         <ul>
-          <li><a href="index.html" aria-current="page">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="skill.html">SKILL</a></li>
-          <li><a href="project.html">PROJECT</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.html#home" aria-current="true">HOME</a></li>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="index.html#skill">SKILL</a></li>
+          <li><a href="index.html#project">PROJECT</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="layout layout--single">
-
-    <main class="content">
-      <article>
-        <div class="content-top">
-          <p class="breadcrumb">Home</p>
-          <p class="author">Oleh [NAMA]</p>
+    <main class="sections">
+      <section class="section" id="home">
+        <div class="section-inner">
+          <h1>[NAMA]</h1>
+          <p class="lead">[Penjelasan singkat tentang website ini]</p>
+          <div class="info-grid">
+            <article class="card"><h2>Tentang website</h2><p>[Penjelasan singkat website]</p></article>
+            <article class="card"><h2>Tujuan website</h2><p>[Tujuan website]</p></article>
+            <article class="card"><h2>Isi website</h2><p>[Gambaran singkat isi]</p></article>
+          </div>
         </div>
-        <h1>[NAMA]</h1>
-        <p class="lead">[Deskripsi singkat tentang website ini]</p>
-        <section class="info-grid" aria-label="Tentang website">
-          <article class="card"><h2>Tentang website</h2><p>[Penjelasan singkat website]</p></article>
-          <article class="card"><h2>Tujuan website</h2><p>[Tujuan website]</p></article>
-          <article class="card"><h2>Isi website</h2><p>[Gambaran singkat isi]</p></article>
-        </section>
-        <section class="shortcut-grid" aria-label="Pintasan halaman">
-          <a class="card card-link" href="about.html"><h2>About</h2><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link" href="skill.html"><h2>Skill</h2><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link" href="project.html"><h2>Project</h2><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link" href="contact.html"><h2>Contact</h2><p>[Deskripsi singkat]</p></a>
-        </section>
-      </article>
+      </section>
+
+      <section class="section section--alt" id="about">
+        <div class="section-inner">
+          <h2 class="section-title">Tentang saya</h2>
+          <div class="two-column">
+            <div class="card"><h3>Perkenalan singkat</h3><p>[Penjelasan singkat tentang diri saya]</p></div>
+            <div class="photo-placeholder" role="img" aria-label="Tempat foto">[FOTO: foto diri]</div>
+          </div>
+          <a class="button" href="about.html">Kenali saya lebih jauh</a>
+        </div>
+      </section>
+
+      <section class="section" id="skill">
+        <div class="section-inner">
+          <h2 class="section-title">Skill</h2>
+          <p class="lead">[Saya memiliki 3 skill yang menurut saya merupakan kelebihan saya.]</p>
+          <div class="info-grid">
+          <article class="card"><h3>Logic</h3><p>[Deskripsi singkat]</p></article>
+          <article class="card"><h3>Rasa ingin tahu</h3><p>[Deskripsi singkat]</p></article>
+          <article class="card"><h3>Introspeksi diri</h3><p>[Deskripsi singkat]</p></article>
+          </div>
+          <a class="button" href="skill.html">Lihat skill selengkapnya</a>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="project">
+        <div class="section-inner">
+          <h2 class="section-title">Project</h2>
+          <p class="lead">Ini adalah hasil pembelajaran mandiri dari pemanfaatan waktu yang saya gunakan selama PKL.</p>
+          <div class="project-grid">
+          <a class="card card-link project-card" href="project.html#project-1"><span class="status-dot status-dot--yes" title="Bersedia dijelaskan"><span class="visually-hidden">Bersedia dijelaskan</span></span><h3>Calyan Novel</h3><p>[Deskripsi singkat]</p></a>
+          <a class="card card-link project-card" href="project.html#project-2"><span class="status-dot status-dot--yes" title="Bersedia dijelaskan"><span class="visually-hidden">Bersedia dijelaskan</span></span><h3>Calyan Web</h3><p>[Deskripsi singkat]</p></a>
+          <a class="card card-link project-card" href="project.html#project-3"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><h3>Cosmic Sandbox</h3><p>[Deskripsi singkat]</p></a>
+          <a class="card card-link project-card" href="project.html#project-4"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><h3>Gold Clicker</h3><p>[Deskripsi singkat]</p></a>
+          <a class="card card-link project-card" href="project.html#project-5"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><h3>Calyan Games</h3><p>[Deskripsi singkat]</p></a>
+          <a class="card card-link project-card" href="project.html#project-6"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><h3>Calyan Games 2</h3><p>[Deskripsi singkat]</p></a>
+          </div>
+          <p class="status-legend"><span class="status-dot status-dot--yes"></span> Bersedia dijelaskan <span class="status-dot status-dot--no"></span> Tidak bersedia dijelaskan</p>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-inner">
+          <h2 class="section-title">Contact</h2>
+          <p class="lead">[Kalimat ajakan menghubungi]</p>
+          <div class="info-grid info-grid--two">
+            <article class="card"><h3>Gmail</h3><p>[GMAIL]</p></article>
+            <article class="card"><h3>GitHub</h3><p>[GITHUB]</p></article>
+          </div>
+        </div>
+      </section>
     </main>
-  </div>
 
   <footer class="site-footer">
     <p class="footer-note">[Teks kecil footer]</p>

@@ -80,3 +80,28 @@ document.querySelectorAll('a[href="#"]').forEach(function (link) {
     event.preventDefault();
   });
 });
+
+// Bagian 4: di index.html, tandai menu navbar sesuai bagian yang sedang terlihat.
+const sections = document.querySelectorAll(".section");
+
+if (sections.length > 0 && "IntersectionObserver" in window) {
+  const navLinks = document.querySelectorAll(".main-nav a");
+  const pengamat = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === "index.html#" + entry.target.id) {
+            link.setAttribute("aria-current", "true");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+  sections.forEach(function (section) {
+    pengamat.observe(section);
+  });
+}

@@ -19,7 +19,7 @@
   color: var(--muted); font-size: 0.85rem; font-weight: 600;
 }
 .main-nav a:hover { background: var(--tint); color: var(--navy); }
-.main-nav a[aria-current="page"] { background: var(--navy); color: #fff; }
+.main-nav a[aria-current] { background: var(--navy); color: #fff; }
 
 .back-link {
   padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
@@ -132,3 +132,12 @@
 .dots { display: flex; gap: 6px; }
 .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--line); }
 .dot.is-active { width: 22px; background: var(--navy); }
+
+/* ---------- Bagian di index.html ---------- */
+.section-title { font-size: 1.8rem; line-height: 1.25; color: var(--navy); }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.project-card { position: relative; padding-right: 36px; }
+.project-card .status-dot { position: absolute; top: 16px; right: 16px; }
+.status-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; color: var(--muted); font-size: 0.85rem; }
+.status-legend .status-dot { margin-left: 8px; }
+.status-legend .status-dot:first-child { margin-left: 0; }
