@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | [NAMA]</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-logo">[LOGO]</span>
+      <span class="brand-text"><strong>[NAMA]</strong><small>[Judul portfolio]</small></span>
+    </a>
+    <div class="header-right">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" aria-current="page">ABOUT</a></li>
+          <li><a href="skill.html">SKILL</a></li>
+          <li><a href="project.html">PROJECT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <a class="back-link" href="index.html">Kembali</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav aria-label="Isi About">
+        <p class="sidebar-title">Isi About</p>
+        <ul class="side-list">
+          <li><a class="side-item is-active" aria-current="page" href="#cerita"><span class="side-num">1</span><span class="side-text"><strong>Tentang saya</strong><small>Cerita perjalanan</small></span></a></li>
+          <li><a class="side-item" href="#pendidikan"><span class="side-num">2</span><span class="side-text"><strong>Perjalanan pendidikan</strong><small>Detail pendidikan</small></span></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="panel" id="cerita">
+        <div class="content-top">
+          <p class="breadcrumb">About</p>
+          <p class="author">Oleh [NAMA]</p>
+        </div>
+        <h1>About</h1>
+        <p class="lead">[Pengantar singkat tentang perjalanan]</p>
+        <section class="two-column">
+          <div class="card"><h2>Perjalanan saya</h2><p>[Cerita singkat perjalanan]</p><p>[Gambaran perkembangan diri]</p></div>
+          <div class="photo-placeholder" role="img" aria-label="Tempat foto">[FOTO: foto diri]</div>
+        </section>
+        <a class="button" href="#pendidikan">Lihat perjalanan pendidikan</a>
+      </article>
+      <article class="panel" id="pendidikan" hidden>
+        <div class="content-top">
+          <p class="breadcrumb">About · Perjalanan pendidikan</p>
+          <p class="author">Oleh [NAMA]</p>
+        </div>
+        <h1>Perjalanan pendidikan</h1>
+        <p class="lead">[Pengantar singkat pendidikan]</p>
+        <ol class="timeline"><li class="timeline-item"><p class="timeline-year">[Tahun]</p><div class="card"><h3>[Jenjang]</h3><p>[Nama institusi]</p><p>[Keterangan]</p></div></li><li class="timeline-item"><p class="timeline-year">[Tahun]</p><div class="card"><h3>[Jenjang]</h3><p>[Nama institusi]</p><p>[Keterangan]</p></div></li><li class="timeline-item"><p class="timeline-year">[Tahun]</p><div class="card"><h3>[Jenjang]</h3><p>[Nama institusi]</p><p>[Keterangan]</p></div></li></ol>
+      </article>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p class="footer-note">[Teks kecil footer]</p>
+    <div class="page-indicator" role="img" aria-label="Halaman 1 dari 2"><span class="dots"><span class="dot is-active"></span><span class="dot"></span></span><span class="count">01 / 02</span></div>
+  </footer>
+</body>
+</html>
