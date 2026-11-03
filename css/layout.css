@@ -1,48 +1,62 @@
-/* layout.css - kerangka halaman: header, sidebar + konten, footer. */
+/* layout.css - kerangka halaman: header, sidebar + konten, bagian scroll, footer. */
 .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 14px 32px;
-  background: var(--surface);
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 14px var(--gutter);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(20, 40, 75, 0.05);
 }
 .header-right { display: flex; align-items: center; gap: 20px; }
 
+/* ----- halaman detail (about, skill, project) ----- */
 .layout {
   flex: 1;
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 40px;
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 32px;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 48px;
+  width: 100%; max-width: 1240px; margin: 0 auto;
+  padding: 48px var(--gutter) 64px;
 }
-.layout--single { grid-template-columns: minmax(0, 1fr); }
-.layout--single .content { max-width: 980px; width: 100%; margin: 0 auto; }
-
 .sidebar { align-self: start; position: sticky; top: 100px; }
-.content { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
-.panel, .content > article { display: flex; flex-direction: column; gap: 24px; }
+.content { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.panel { display: flex; flex-direction: column; gap: 28px; }
 .content-top { display: flex; justify-content: space-between; gap: 16px; }
 
-.site-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px 32px;
-  background: var(--surface);
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.85rem;
+/* ----- halaman utama (index.html): bagian yang di-scroll ----- */
+.sections { flex: 1; }
+.section {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  min-height: calc(100vh - 76px);
+  padding: 88px var(--gutter);
+  background: var(--white);
+}
+.section--soft { background: linear-gradient(180deg, var(--bg), #eaf0fa); }
+.section--navy {
+  background:
+    radial-gradient(700px 360px at 88% 0%, rgba(120, 165, 235, 0.22), transparent 70%),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+  color: #fff;
+}
+/* lingkaran dekoratif halus */
+.section--navy::before, .section--navy::after {
+  content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.section--navy::before { width: 460px; height: 460px; right: -140px; top: -160px; }
+.section--navy::after { width: 260px; height: 260px; left: -90px; bottom: -110px; }
+.section-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 28px;
+  width: 100%; max-width: 1100px; margin: 0 auto;
 }
 
-/* ---------- Halaman utama (index.html): bagian yang di-scroll ---------- */
-.site-header { position: sticky; top: 0; z-index: 20; }
-.sections { flex: 1; }
-.section { display: flex; align-items: center; min-height: calc(100vh - 76px); padding: 64px 32px; }
-.section--alt { background: var(--surface); border-block: 1px solid var(--line); }
-.section-inner { display: flex; flex-direction: column; gap: 24px; width: 100%; max-width: 1100px; margin: 0 auto; }
+.site-footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px var(--gutter);
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.85rem;
+}
