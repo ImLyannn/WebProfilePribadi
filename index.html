@@ -1,103 +1,571 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | [NAMA]</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <script src="js/script.js" defer></script>
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-logo">[LOGO]</span>
-      <span class="brand-text"><strong>[NAMA]</strong><small>[Judul portfolio]</small></span>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>
+      Home | [NAMA]
+    </title>
+    <meta content="[Deskripsi singkat halaman ini untuk Google, maksimal 160 karakter]" name="description"/>
+    <meta content="#14284b" name="theme-color"/>
+    <meta content="website" property="og:type"/>
+    <meta content="[NAMA] | Portfolio" property="og:title"/>
+    <meta content="[Deskripsi singkat]" property="og:description"/>
+    <link href="images/CALYAN.jpeg" rel="icon" type="image/svg+xml"/>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <link href="css/components.css" rel="stylesheet"/>
+    <link href="css/responsive.css" rel="stylesheet"/>
+    <script defer="" src="js/script.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#konten">
+      Lewati ke konten
     </a>
-    <div class="header-right">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
-      <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
-        <ul>
-          <li><a href="index.html#home" aria-current="true">HOME</a></li>
-          <li><a href="index.html#about">ABOUT</a></li>
-          <li><a href="index.html#skill">SKILL</a></li>
-          <li><a href="index.html#project">PROJECT</a></li>
-          <li><a href="index.html#contact">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-    <main class="sections">
+    <!-- Kumpulan ikon (jangan diubah) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol><symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></symbol></defs></svg>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">
+          <span class="logo-text">
+            LOGO
+          </span>
+          <img alt="" height="96" src="assets/images/logo.png" width="96"/>
+        </span>
+        <span class="brand-text">
+          <strong>
+            [NAMA]
+          </strong>
+          <small>
+            [Judul portfolio]
+          </small>
+        </span>
+      </a>
+      <div class="header-right">
+        <button aria-controls="main-nav" aria-expanded="false" class="menu-toggle" type="button">
+          <svg aria-hidden="true" class="i">
+            <use href="#i-menu">
+            </use>
+          </svg>
+          Menu
+        </button>
+        <nav aria-label="Navigasi utama" class="main-nav" id="main-nav">
+          <ul>
+            <li>
+              <a aria-current="true" href="index.html#home">
+                HOME
+              </a>
+            </li>
+            <li>
+              <a href="index.html#about">
+                ABOUT
+              </a>
+            </li>
+            <li>
+              <a href="index.html#skill">
+                SKILL
+              </a>
+            </li>
+            <li>
+              <a href="index.html#project">
+                PROJECT
+              </a>
+            </li>
+            <li>
+              <a href="index.html#contact">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="sections" id="konten">
       <section class="section section--navy" id="home">
         <div class="section-inner">
-          <h1>[NAMA]</h1>
-          <p class="lead">[Penjelasan singkat tentang website ini]</p>
+          <div class="hero-grid">
+            <div class="hero-text">
+              <p class="eyebrow">
+                [Peran Anda, mis. Pelajar RPL dan pengembang web pemula]
+              </p>
+              <h1>
+                [NAMA]
+              </h1>
+              <p class="lead">
+                [Penjelasan singkat tentang website ini]
+              </p>
+              <div class="button-row">
+                <a class="btn btn--primary" href="#project">
+                  Lihat project
+                  <svg aria-hidden="true" class="i">
+                    <use href="#i-arrow">
+                    </use>
+                  </svg>
+                </a>
+                <a class="btn btn--secondary" href="#about">
+                  Kenali saya
+                </a>
+              </div>
+            </div>
+            <figure class="photo-frame">
+              <div class="photo-slot">
+                <img alt="Foto [NAMA]" decoding="async" fetchpriority="high" height="1000" src="assets/images/foto-utama.jpg" width="800"/>
+                <div class="slot-empty">
+                  <svg aria-hidden="true" class="i">
+                    <use href="#i-image">
+                    </use>
+                  </svg>
+                  <strong>
+                    Foto utama
+                  </strong>
+                  <span>
+                    Letakkan file di
+                  </span>
+                  <code>
+                    assets/images/foto-utama.jpg
+                  </code>
+                  <small>
+                    Ukuran saran 800×1000 px
+                  </small>
+                </div>
+              </div>
+            </figure>
+          </div>
           <div class="info-grid">
-            <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><h2>Tentang website</h2><p>[Penjelasan singkat website]</p></article>
-            <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span><h2>Tujuan website</h2><p>[Tujuan website]</p></article>
-            <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><h2>Isi website</h2><p>[Gambaran singkat isi]</p></article>
+            <article class="card">
+              <span class="icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9">
+                  </circle>
+                  <path d="M12 11v5M12 8h.01">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Tentang website
+              </h3>
+              <p>
+                [Penjelasan singkat website]
+              </p>
+            </article>
+            <article class="card">
+              <span class="icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9">
+                  </circle>
+                  <circle cx="12" cy="12" r="4">
+                  </circle>
+                </svg>
+              </span>
+              <h3>
+                Tujuan website
+              </h3>
+              <p>
+                [Tujuan website]
+              </p>
+            </article>
+            <article class="card">
+              <span class="icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M4 6h16M4 12h16M4 18h10">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Isi website
+              </h3>
+              <p>
+                [Gambaran singkat isi]
+              </p>
+            </article>
           </div>
         </div>
       </section>
-
       <section class="section" id="about">
         <div class="section-inner">
-          <h2 class="section-title">Tentang saya</h2>
-          <div class="two-column">
-            <div class="card"><h3>Perkenalan singkat</h3><p>[Penjelasan singkat tentang diri saya]</p></div>
-            <div class="photo-placeholder" role="img" aria-label="Tempat foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg><span>[FOTO: foto diri]</span></div>
+          <div class="about-grid">
+            <figure class="photo-frame">
+              <div class="photo-slot">
+                <img alt="Foto diri [NAMA]" decoding="async" height="1000" loading="lazy" src="assets/images/foto-diri.jpg" width="800"/>
+                <div class="slot-empty">
+                  <svg aria-hidden="true" class="i">
+                    <use href="#i-image">
+                    </use>
+                  </svg>
+                  <strong>
+                    Foto diri
+                  </strong>
+                  <span>
+                    Letakkan file di
+                  </span>
+                  <code>
+                    assets/images/foto-diri.jpg
+                  </code>
+                  <small>
+                    Ukuran saran 800×1000 px
+                  </small>
+                </div>
+              </div>
+            </figure>
+            <div class="about-text">
+              <p class="eyebrow">
+                About
+              </p>
+              <h2 class="section-title">
+                Tentang saya
+              </h2>
+              <div class="card">
+                <h3>
+                  Perkenalan singkat
+                </h3>
+                <p>
+                  [Penjelasan singkat tentang diri saya]
+                </p>
+              </div>
+              <a class="btn btn--secondary" href="about.html">
+                Kenali saya lebih jauh
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </a>
+            </div>
           </div>
-          <a class="button" href="about.html">Kenali saya lebih jauh<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </section>
-
       <section class="section section--soft" id="skill">
         <div class="section-inner">
-          <h2 class="section-title">Skill</h2>
-          <p class="lead">[Saya memiliki 3 skill yang menurut saya merupakan kelebihan saya.]</p>
-          <div class="info-grid">
-          <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M6 8.5v2c0 2 2 3 6 3s6-1 6-3v-2M12 13.5v2"/></svg></span><h3>Logic</h3><p>[Deskripsi singkat]</p></article>
-          <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><h3>Rasa ingin tahu</h3><p>[Deskripsi singkat]</p></article>
-          <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Introspeksi diri</h3><p>[Deskripsi singkat]</p></article>
+          <div class="section-head">
+            <p class="eyebrow">
+              Skill
+            </p>
+            <h2 class="section-title">
+              Kelebihan saya
+            </h2>
+            <p class="lead">
+              [Saya memiliki 3 skill yang menurut saya merupakan kelebihan saya.]
+            </p>
           </div>
-          <a class="button" href="skill.html">Lihat skill selengkapnya<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="info-grid">
+            <article class="card">
+              <span class="icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="6" cy="6" r="2.5">
+                  </circle>
+                  <circle cx="18" cy="6" r="2.5">
+                  </circle>
+                  <circle cx="12" cy="18" r="2.5">
+                  </circle>
+                  <path d="M6 8.5v2c0 2 2 3 6 3s6-1 6-3v-2M12 13.5v2">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Logic
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+            </article>
+            <article class="card">
+              <span class="icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="6">
+                  </circle>
+                  <path d="M20 20l-4.5-4.5">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Rasa ingin tahu
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+            </article>
+            <article class="card">
+              <span class="icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z">
+                  </path>
+                  <circle cx="12" cy="12" r="3">
+                  </circle>
+                </svg>
+              </span>
+              <h3>
+                Introspeksi diri
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+            </article>
+          </div>
+          <div class="tech">
+            <h3>
+              Teknologi yang saya pakai
+            </h3>
+            <ul class="tag-list">
+              <li>
+                HTML
+              </li>
+              <li>
+                CSS
+              </li>
+              <li>
+                JavaScript
+              </li>
+              <li>
+                [Teknologi lain]
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn--tertiary" href="skill.html">
+            Lihat skill selengkapnya
+            <svg aria-hidden="true" class="i">
+              <use href="#i-arrow">
+              </use>
+            </svg>
+          </a>
         </div>
       </section>
-
       <section class="section" id="project">
         <div class="section-inner">
-          <h2 class="section-title">Project</h2>
-          <p class="lead">Ini adalah hasil pembelajaran mandiri dari pemanfaatan waktu yang saya gunakan selama PKL.</p>
-          <div class="project-grid">
-          <a class="card card-link project-card" href="project.html#project-1"><span class="status-dot status-dot--yes" title="Bersedia dijelaskan"><span class="visually-hidden">Bersedia dijelaskan</span></span><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span><h3>Calyan Novel</h3><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link project-card" href="project.html#project-2"><span class="status-dot status-dot--yes" title="Bersedia dijelaskan"><span class="visually-hidden">Bersedia dijelaskan</span></span><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span><h3>Calyan Web</h3><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link project-card" href="project.html#project-3"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span><h3>Cosmic Sandbox</h3><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link project-card" href="project.html#project-4"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span><h3>Gold Clicker</h3><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link project-card" href="project.html#project-5"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span><h3>Calyan Games</h3><p>[Deskripsi singkat]</p></a>
-          <a class="card card-link project-card" href="project.html#project-6"><span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan"><span class="visually-hidden">Tidak bersedia dijelaskan</span></span><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span><h3>Calyan Games 2</h3><p>[Deskripsi singkat]</p></a>
+          <div class="section-head">
+            <p class="eyebrow">
+              Project
+            </p>
+            <h2 class="section-title">
+              Hasil belajar mandiri
+            </h2>
+            <p class="lead">
+              Ini adalah hasil pembelajaran mandiri dari pemanfaatan waktu yang saya gunakan selama PKL.
+            </p>
           </div>
-          <p class="status-legend"><span class="status-dot status-dot--yes"></span> Bersedia dijelaskan <span class="status-dot status-dot--no"></span> Tidak bersedia dijelaskan</p>
+          <div class="project-grid">
+            <a class="project-card" href="project.html#project-1">
+              <span class="status-dot status-dot--yes" title="Bersedia dijelaskan">
+                <span class="visually-hidden">
+                  Bersedia dijelaskan
+                </span>
+              </span>
+              <span class="project-icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M5 4h10a3 3 0 013 3v13H8a3 3 0 01-3-3V4z">
+                  </path>
+                  <path d="M5 17a3 3 0 013-3h10">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Calyan Novel
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+              <span class="project-cta">
+                Lihat project
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </span>
+            </a>
+            <a class="project-card" href="project.html#project-2">
+              <span class="status-dot status-dot--yes" title="Bersedia dijelaskan">
+                <span class="visually-hidden">
+                  Bersedia dijelaskan
+                </span>
+              </span>
+              <span class="project-icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9">
+                  </circle>
+                  <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Calyan Web
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+              <span class="project-cta">
+                Lihat project
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </span>
+            </a>
+            <a class="project-card" href="project.html#project-3">
+              <span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan">
+                <span class="visually-hidden">
+                  Tidak bersedia dijelaskan
+                </span>
+              </span>
+              <span class="project-icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="5">
+                  </circle>
+                  <ellipse cx="12" cy="12" rx="10.5" ry="3.5" transform="rotate(-25 12 12)">
+                  </ellipse>
+                </svg>
+              </span>
+              <h3>
+                Cosmic Sandbox
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+              <span class="project-cta">
+                Lihat project
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </span>
+            </a>
+            <a class="project-card" href="project.html#project-4">
+              <span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan">
+                <span class="visually-hidden">
+                  Tidak bersedia dijelaskan
+                </span>
+              </span>
+              <span class="project-icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9">
+                  </circle>
+                  <path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5v1.5M12 16v1.5">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Gold Clicker
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+              <span class="project-cta">
+                Lihat project
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </span>
+            </a>
+            <a class="project-card" href="project.html#project-5">
+              <span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan">
+                <span class="visually-hidden">
+                  Tidak bersedia dijelaskan
+                </span>
+              </span>
+              <span class="project-icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect height="11" rx="5" width="20" x="2" y="7">
+                  </rect>
+                  <path d="M7 10v5M4.5 12.5h5M16 11.5h.01M18.5 14h.01">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Calyan Games
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+              <span class="project-cta">
+                Lihat project
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </span>
+            </a>
+            <a class="project-card" href="project.html#project-6">
+              <span class="status-dot status-dot--no" title="Tidak bersedia dijelaskan">
+                <span class="visually-hidden">
+                  Tidak bersedia dijelaskan
+                </span>
+              </span>
+              <span class="project-icon">
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M12 3l9 5-9 5-9-5 9-5z">
+                  </path>
+                  <path d="M3 13l9 5 9-5">
+                  </path>
+                </svg>
+              </span>
+              <h3>
+                Calyan Games 2
+              </h3>
+              <p>
+                [Deskripsi singkat]
+              </p>
+              <span class="project-cta">
+                Lihat project
+                <svg aria-hidden="true" class="i">
+                  <use href="#i-arrow">
+                  </use>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <p class="status-legend">
+            <span class="status-dot status-dot--yes">
+            </span>
+            Bersedia dijelaskan
+            <span class="status-dot status-dot--no">
+            </span>
+            Tidak bersedia dijelaskan
+          </p>
         </div>
       </section>
-
       <section class="section section--navy" id="contact">
         <div class="section-inner">
-          <h2 class="section-title">Contact</h2>
-          <p class="lead">Jika Anda ingin menghubungi saya, silakan gunakan informasi di bawah ini:</p>
-          <div class="info-grid info-grid--two">
-            <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><h3>Gmail</h3><p>[GMAIL]</p></article>
-            <article class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><h3>Sosmed</h3><p>[Instagram]</p></article>
+          <div class="section-head">
+            <p class="eyebrow">
+              Contact
+            </p>
+            <h2 class="section-title">
+              Hubungi saya
+            </h2>
+            <p class="lead">
+              [Kalimat ajakan menghubungi]
+            </p>
+          </div>
+          <div class="contact-grid">
+            <!-- GANTI email di href DAN teks (Ctrl+H: emailanda@gmail.com) -->
+            <a class="contact-card" href="mailto:emailanda@gmail.com">
+              <span class="contact-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 7l9 6 9-6"></path></svg></span>
+              <div>
+                <h3>Gmail</h3>
+                <p>emailanda@gmail.com</p>
+              </div>
+              <svg aria-hidden="true" class="i contact-go"><use href="#i-arrow"></use></svg>
+            </a>
+            <!-- GANTI username di href DAN teks (Ctrl+H: usernameanda) -->
+            <a class="contact-card" href="https://github.com/usernameanda" target="_blank" rel="noopener">
+              <span class="contact-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"></path></svg></span>
+              <div>
+                <h3>GitHub</h3>
+                <p>github.com/usernameanda</p>
+              </div>
+              <svg aria-hidden="true" class="i contact-go"><use href="#i-arrow"></use></svg>
+            </a>
           </div>
         </div>
       </section>
     </main>
-
-  <footer class="site-footer">
-    <p class="footer-note">Portfolio Mandiri - Brilliant Almighty Nimbuzz Dafolky</p>
-    
-  </footer>
-</body>
+    <footer class="site-footer">
+      <p class="footer-note">
+        ©
+        <span data-year="">
+          2026
+        </span>
+        [NAMA] · [Teks kecil footer]
+      </p>
+    </footer>
+  </body>
 </html>
