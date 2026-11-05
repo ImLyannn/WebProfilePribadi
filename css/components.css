@@ -192,7 +192,11 @@
 .photo-frame { position: relative; margin: 0; padding: 0 18px 18px 0; }
 .photo-frame::before { content: ""; position: absolute; inset: 18px 0 0 18px; border-radius: 28px; background: linear-gradient(135deg, var(--accent), #f8c46a); }
 .photo-slot { position: relative; z-index: 1; overflow: hidden; aspect-ratio: var(--ratio, 4 / 5); border-radius: 28px; background: linear-gradient(135deg, #fff, var(--tint)); box-shadow: var(--shadow-lg); }
+<<<<<<< HEAD
 .photo-slot--wide { --ratio: 16 / 10; }
+=======
+.photo-slot--wide { --ratio: 2 / 1; }
+>>>>>>> 1a37c67 (upd)
 .photo-slot img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
 .slot-empty { position: absolute; inset: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 16px; text-align: center; border: 2px dashed var(--line); border-radius: 20px; color: var(--muted); font-size: 0.9rem; }
 .slot-empty svg { width: 44px; height: 44px; color: var(--navy-soft); opacity: 0.55; }
@@ -259,3 +263,9 @@
 .tag-list li { border: 1px solid var(--line); background: #fff; }
 .skill-proof { color: var(--muted); }
 .skill-proof a { color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+<<<<<<< HEAD
+=======
+
+/* Penanda bagian yang menunggu data dari pemilik website. Hapus kelas ini setelah semua terisi. */
+.todo { padding: 1px 8px; border: 1px dashed #d4a017; border-radius: 6px; background: #fff7dd; color: #7a5a00; font-size: 0.92em; }
+>>>>>>> 1a37c67 (upd)
