@@ -98,6 +98,7 @@ if (menuToggle && mainNav) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Bagian 4: link placeholder (href="#") tidak boleh melompat ke atas halaman.
 // Hapus bagian ini kalau semua link placeholder sudah diganti link asli.
 document.querySelectorAll('a[href="#"]').forEach(function (link) {
@@ -108,6 +109,8 @@ document.querySelectorAll('a[href="#"]').forEach(function (link) {
 
 =======
 >>>>>>> 1a37c67 (upd)
+=======
+>>>>>>> 6e3d915 (melanjutkan pengisian.)
 // Bagian 5: di index.html, tandai menu navbar sesuai bagian yang sedang terlihat.
 const sections = document.querySelectorAll(".section");
 if (sections.length > 0 && "IntersectionObserver" in window) {

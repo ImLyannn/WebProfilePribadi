@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tebak Angka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ngegameyuk.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="card" aria-labelledby="title">
+        <header class="mast">
+          <p class="eyebrow">Minigame · 1–100</p>
+          <h1 id="title">Tebak Angka</h1>
+          <p class="lede">
+            Satu angka tersembunyi. Tujuh tebakan. Setiap petunjuk mempersempit
+            rentang yang masih mungkin.
+          </p>
+        </header>
+
+        <div class="board">
+          <div class="range" aria-live="polite">
+            <div class="bound">
+              <span class="bound-label">Paling rendah</span>
+              <span class="bound-value" id="low-bound">1</span>
+            </div>
+            <div class="track-wrap">
+              <div class="track" aria-hidden="true">
+                <div class="track-fill" id="track-fill"></div>
+              </div>
+              <p class="range-caption" id="range-caption">Masih mungkin: 1–100</p>
+            </div>
+            <div class="bound bound-end">
+              <span class="bound-label">Paling tinggi</span>
+              <span class="bound-value" id="high-bound">100</span>
+            </div>
+          </div>
+
+          <div class="lives" id="lives" aria-label="Kesempatan tersisa"></div>
+        </div>
+
+        <form class="guess-form" id="guess-form">
+          <label for="guess">Tebakanmu</label>
+          <div class="input-row">
+            <input
+              id="guess"
+              name="guess"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              max="100"
+              step="1"
+              placeholder="1–100"
+              autocomplete="off"
+              required
+            />
+            <button class="primary" type="submit" id="submit">Tebak</button>
+          </div>
+        </form>
+
+        <p class="feedback" id="feedback" role="status" aria-live="polite">
+          Masukkan angka, lalu tekan Tebak.
+        </p>
+
+        <ol class="history" id="history" aria-label="Riwayat tebakan"></ol>
+
+        <div class="result" id="result" hidden>
+          <p class="result-kicker" id="result-kicker"></p>
+          <p class="result-number" id="result-number"></p>
+          <p class="result-copy" id="result-copy"></p>
+          <button class="primary" type="button" id="restart">Main lagi</button>
+        </div>
+      </section>
+    </main>
+    <script src="ngegameyuk.js"></script>
+  </body>
+</html>
